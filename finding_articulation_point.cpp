@@ -58,7 +58,7 @@ void dfs(int n , int par)
         }
         else
         {
-            low[n] = min(low[n] , low[x]);
+            low[n] = min(low[n] , id[x]);
         }
     }
 }
