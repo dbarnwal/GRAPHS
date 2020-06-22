@@ -36,6 +36,12 @@ void dijkstra(int start)
     {
         int cur = pq.top().S ,d_cur = pq.top().F; 
         pq.pop();
+        
+        /* 
+            we are using d_cur > dis[cur] because it will be BFS because that keeps going only when 
+            new distance would be lower than current minimum distance for this node and that will be 
+            very slow in most of the cases.
+        */
         if(d_cur>dis[cur])
             continue;
         for(auto it:adj[cur])
