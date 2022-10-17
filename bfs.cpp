@@ -1,6 +1,22 @@
 // VALUE THE SACRIFICES..
 //  ~ _Aomine_   -> 17/04/20
 
+/**
+A standard BFS implementation puts each vertex of the graph into one of two categories:
+
+Visited
+Not Visited
+The purpose of the algorithm is to mark each vertex as visited while avoiding cycles.
+
+The algorithm works as follows:
+
+Start by putting any one of the graph's vertices at the back of a queue.
+Take the front item of the queue and add it to the visited list.
+Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the back of the queue.
+Keep repeating steps 2 and 3 until the queue is empty.
+The graph might have two different disconnected parts so to make sure that we cover every vertex, we can also run the BFS algorithm on every node
+**/
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long double ld;
