@@ -1,7 +1,3 @@
-/* 
-    AABRA KA DABRA.. !! 
-*/
-
 /**
 Sort the Edges: First, sort all the edges of the graph in non-decreasing order of their weights. This can be done using any sorting algorithm, such as quicksort or mergesort.
 Create an Empty Tree: Initially, the MST is an empty set of edges.
