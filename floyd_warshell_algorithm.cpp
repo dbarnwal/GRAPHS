@@ -1,5 +1,10 @@
 /* 
     AABRA KA DABRA.. !! 
+    Here's how the Floyd-Warshall algorithm works:
+
+Initialization: Create a matrix, often called the "distance matrix" or "adjacency matrix," where each element dist[i][j] represents the shortest distance from vertex i to vertex j. Initially, this matrix is filled with the direct edge weights if there's an edge between vertices i and j, and it's filled with a special value (often infinity) for all other pairs.
+Main Loop: The algorithm proceeds by considering all vertices one by one as intermediate vertices. For each vertex k, it checks if the path from vertex i to vertex j through vertex k is shorter than the current known distance from i to j. If it is, then the matrix is updated to reflect this shorter path.
+Iteration: The algorithm repeats the Main Loop for all vertices, gradually refining the distance matrix until all shortest paths are found.
 */
 #include "bits/stdc++.h"
 using namespace std;
