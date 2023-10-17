@@ -3,13 +3,14 @@
 */
 
 /**
-A spanning tree is a sub-graph of an undirected connected graph, which includes all the vertices of the graph with a minimum possible number of edges. If a vertex is missed, then it is not a spanning tree.
+Sort the Edges: First, sort all the edges of the graph in non-decreasing order of their weights. This can be done using any sorting algorithm, such as quicksort or mergesort.
+Create an Empty Tree: Initially, the MST is an empty set of edges.
+Iterate Over Edges: Begin iterating through the sorted edges, from the smallest to the largest weight. For each edge, do the following:
+a. Check for a Cycle: If adding the current edge to the MST would create a cycle (i.e., if the two endpoints of the edge are already connected in the MST), skip this edge and move on to the next one. You can check for a cycle using techniques like disjoint-set data structures (e.g., Union-Find).
+b. Add to MST: If the edge doesn't create a cycle, add it to the MST. This edge is now considered part of the MST.
+Repeat: Continue this process until you have added V - 1 edges to the MST, where V is the number of vertices in the graph. This ensures that the resulting tree is indeed a spanning tree, connecting all vertices.
+MST is Complete: At the end of the algorithm, you will have constructed a Minimum Spanning Tree that contains all the vertices of the original graph with the minimum possible total weight.
 
-The edges may or may not have weights assigned to them.
-
-The total number of spanning trees with n vertices that can be created from a complete graph is equal to n(n-2).
-
-If we have n = 4, the maximum number of possible spanning trees is equal to 44-2 = 16. Thus, 16 spanning trees can be formed from a complete graph with 4 vertices.
 **/
 #include "bits/stdc++.h"
 using namespace std;
